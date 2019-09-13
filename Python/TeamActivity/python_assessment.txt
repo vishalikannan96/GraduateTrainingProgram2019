@@ -1,0 +1,41 @@
+Hakka and Bukka were brothers and warriors. The brothers wanted to build their own kingdom where people could live without fear. They collected a band of young men and trained them in warfare. They lived in a forest hideout on the banks of the river Tungabhadra in South India.
+One day, the brothers were out on a hunt. Ferocious dogs accompanied them. They crossed the river and rode on. A couple of frightened rabbits ran out of the bushes. The dogs gave them chase with the two brothers closely behind on their horses.
+It was a long chase. The rabbits were running for their life. The dogs were catching up. Suddenly, in a swift move, the rabbits turned and faced the dogs. Taken aback by the show of defiance, the barking dogs stepped back. Hakka called back the dogs. As the dogs turned back, the rabbits walked away.
+Hakka looked around. They were on the other side of the Tungabhadra. It was a rocky land. The sun was blazing in the sky.
+“Strange! I’ve never seen rabbits challenging dogs before!” said Bukka.
+“That’s the quality of this land,” said a quiet voice, “Even rabbits give fight.”
+Startled to hear a stranger speak, the two brothers turned.
+They saw a holy man walking towards them. He was a picture of peace. At the same time, his eyes were blazing bright.
+
+
+Output:
+Dictionary format with keys 
+1.	Length of string
+2.	Number of words
+3.	Max Occurance
+4.	Max Occurance word
+5.	Repeated word's count
+6.	Repeated word's list
+
+
+
+------------------------------------------------------------
+
+i/p 
+['five plus three','seven minus two','two plus eight minus five','eight divide four']
+
+o/p ['eight', 'five', 'five', 'four']
+
+------------------------------------------------------------
+
+Check the given number is palindrome or not?? (using mathematical and string manipulation) 	
+
+------------------------------------------------------------
+
+find prime numbers for given range .. input : 2 numbers find the range and display list of prime numbers
+
+------------------------------------------------------------
+
+find anagram for two given string ex. add, dad --> anagram
+
+------------------------------------------------------------
