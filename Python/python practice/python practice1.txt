@@ -1,0 +1,174 @@
+1)//calculate 101
+  s = '10101010100111101'
+  count = 0
+  for i in range(len(s) - 1):
+      if s[i]=='1' and s[i+1]=='0' and s[i+2]=='1':
+          count+=1
+  print count
+2)//matrix diagonal calculation
+  3 8 7
+
+  8 7 9
+
+  1 6 0
+
+  list1=[[3,8,7],[8,7,9],[1,6,0]]
+  count1=0
+  count2=0
+  j=len(list1)-1
+  for i in range(len(list1)):
+      print 'left:',list1[i][i]
+      count1=count1+list1[i][i]
+      print 'right:',list1[i][j]
+      count2 = count2 + list1[i][j]
+      j = j - 1
+  print 'left count:',count1
+  print 'right count:',count2
+
+//matrix transportation
+list1=[[3,8,7],[8,7,9],[1,6,0]]
+count1=0
+list2=[]
+list3=[]
+count2=0
+j=len(list1)-1
+for i in range(len(list1)):
+    list2.append(list1[i][i])
+    count1=count1+list1[i][i]
+    list3.append(list1[i][j])
+    count2 = count2 + list1[i][j]
+    j = j - 1
+print 'left:',list2,count1
+print 'right:',list3,count2
+3)//anticlockwise
+  list1=[[3,8,7],[8,7,9],[1,6,0]]
+  for i in range(len(list1)):
+      for j in range(len(list1)):
+          print list1[i][j],
+      print('\n')
+  for i in range(len(list1)-1,-1,-1):
+      for j in range(len(list1)):
+          print list1[j][i],
+      print('\n')
+
+4)//count of ca
+  string=''
+  count=0
+  string1='abc'
+  flag='True'
+  while True:
+      for i in string1:
+          string=string+i
+          if len(string)==1111:
+              flag='False'
+              break
+      if flag=='False':
+          break
+  for char in range(len(string)):
+      if string[char]=='c' and string[char+1]=='a':
+          count+=1
+  print 'count:',count
+
+5)//swapcase
+  string=raw_input()
+  string2=''
+  for char in string:
+      if char.islower():
+          char=char.upper()
+          string2+=char
+      elif char.isupper():
+          char=char.lower()
+          string2+=char
+  print string2
+
+6)//longest sequence
+  string='abccdefabcdefae'
+  str1=''
+  list1=[]
+  length=0
+  for i in range(len(string)-1):
+      if ord(string[i])-ord(string[i+1])==-1:
+          str1=str1+string[i]
+      else:
+          str1=str1+string[i]
+          list1.append(str1)
+          str1=""
+  str1=str1+string[len(string)-1]
+  list1.append(str1)
+  for word in list1:
+      if len(word)>length:
+          length=len(word)
+          sequence=word
+  print sequence,length
+
+
+7)//sum b/w 1 to 1000
+  sum=0
+  for  num in range(1,1000):
+      if num%3==0 and num%5==0:
+          sum+=num
+  print sum
+
+8)//ph_number
+  number=raw_input("enter number:")
+  str1=''
+  for num in (sorted(number[6:10])):
+      str1=str1+num
+  print number[0:3],'-',number[3:6],'-',str1
+
+9)//count numbers in string using regular exp
+  import re
+  sum=0
+  string="There are 26 alphabets in English out of which 5 are vowels and 21 are consonants"
+  list1=re.findall(r'[0-9]+',string)
+  for num in list1:
+      sum+=int(num)
+  print sum
+
+10)//anagram
+   def sorting(list1):
+       for i in range(len(list1)):
+           for j in range(i+1,len(list1)):
+               if list1[i]>list1[j]:
+                   temp=list1[i]
+                   list1[i]=list1[j]
+                   list1[j]=temp
+       return list1
+
+   string1="rate"
+   string2="tear"
+   list1=[]
+   list2=[]
+   if len(string1)==len(string2):
+       for i in range(len(string1)):
+           list1.append(string1[i])
+           list2.append(string2[i])
+   c1=sorting(list1)
+   c2=sorting(list2)
+   if c1==c2:
+       print "anagram"
+   else:
+       print "not anagram"
+
+11)//dict and cube
+   num=raw_input("enter input:")
+   dict1={}
+   for n in range(1,int(num)+1):
+      dict1[n]=n**3
+   print dict1
+
+
+12)//amstrong
+   num1=raw_input("enter num:")
+   length=len(num1)
+   num=int(num1)
+   sum=0
+   while(num!=0):
+       rem=num%10
+       sum=sum+(rem**length)
+       num=num/10
+   if int(num1)==sum:
+       print "amstrong"
+   else:
+       print "not amstrong"
+

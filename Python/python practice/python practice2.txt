@@ -1,0 +1,137 @@
+#1)write a python script to get a student details from user using raw_input:
+
+'''stu_dict={}
+sub_dict={}
+while True:
+    roll_id=raw_input("enter roll id:")
+    name=raw_input("enter name:")
+    class_name=raw_input("enter class name:")
+    marks=raw_input("enter marks:")
+    sub_dict['name']=name
+    sub_dict['class']=class_name
+    sub_dict['marks']=marks.split(',')
+    stu_dict[roll_id]=sub_dict
+    print stu_dict
+    print "want to continue:y/n"
+    value=raw_input()
+    if value=='n':
+        break
+print stu_dict'''
+
+# 2.a)Given the following dictionary
+'''inventory = {'gold' : 500,'pouch' : ['flint', 'twine', 'gemstone'],'backpack' : ['xylophone','dagger', 'bedroll','bread loaf']}
+inventory.update({'pocket':['seashell', 'strange berry','lint']})
+inventory['backpack'].sort()
+inventory['backpack'].remove('dagger')
+inventory['gold']+=50
+print inventory'''
+
+# for key,value in inventory.items():
+#     if key=='backpack':
+#         value==value.sort()
+#         value.remove('dagger')
+#     elif key=='gold':
+#         value+=50
+# print inventory'''
+
+# 2.b) create a student details dictionary having {'student1':[marks1,marks2, marks3],'student2':[marks1,marks2,marks3]}
+'''student={'vishali':[90,95,85],'soundrya':[95,100,80]}
+avg=0
+for key,value in student.items():
+    total = 0
+    for i in value:
+        total+=i
+    print key,"total:",total
+    print key, "avg:",total/len(value)'''
+
+# c)  write the below contents to  a file named 'marks.txt' using python script
+# science = 50
+# maths = 90
+# english = 85
+# tamil = 92
+
+'''with open('marks.txt','w') as f1:
+    f1.writelines(['science=50\n','maths=90\n','english=85\n','tamil=92\n'])
+import re
+list2=[]
+with open('marks.txt','r') as f1:
+    for line in f1:
+        value=re.findall(r'[0-9]+',line)
+        list2.extend(value)
+    print list2
+    print reduce((lambda x,y: int(x)+int(y)),list2)'''
+
+# 4.i write a python script to make a simple calculator that can add, subtract, multiply and divide using functions
+#a) have four functions with two arguments
+#b) get the values from user
+#c) Use try and except
+
+'''def add(a,b):
+    return a+b
+def sub(a,b):
+    return abs(a-b)
+def mul(a,b):
+    return a*b
+def div(a,b):
+    return a/b
+def goto():
+    try:
+        a=int(raw_input("enter a value:"))
+        b=int(raw_input("enter b value:"))
+        if type(a)!=int and type(b)!=int:
+            raise Exception;
+        else:
+            return a,b
+    except Exception:
+        print "pls enter only integers"
+        return goto()
+
+a,b=goto()
+# print a,b
+choice=raw_input("enter choice:")
+if choice=="sum":
+    print add(a,b)
+elif choice=="sub":
+    print sub(a,b)
+elif choice=="mul":
+    print mul(a,b)
+else:
+    print div(a,b)'''
+# 4.ii)Define a function that can accept two strings as input and concatenate them and then print it as a output
+
+'''def sum(a,b):
+    return a+b
+print sum(raw_input("enter string1"),raw_input("enter string2"))'''
+
+#4.iii) write a python script having functions defined to perfrom - sum_digits(1738)
+# output should be 1+7+3+8 = 18
+
+'''def sum_digits(n):
+    sum=0
+    while(n!=0):
+        rem=n%10
+        sum+=rem
+        n=n/10
+    return sum
+print sum_digits(1738)'''
+
+#4.i) read the file and calculate the total sum of marks available there
+# def read_file():
+# def write_file():
+
+'''def write_file(list1):
+    with open('marks.txt','w') as f1:
+        f1.writelines(list1)
+        print "file created"
+def raed_file():
+    import re
+    list2=[]
+    with open('marks.txt','r') as f1:
+        for line in f1:
+            value=re.findall(r'[0-9]+',line)
+            list2.extend(value)
+        print list2
+        print reduce((lambda x, y: int(x)+int(y)),list2)
+list1=['science=50\n','maths=90\n','english=85\n','tamil=92\n']
+write_file(list1)
+raed_file()'''
